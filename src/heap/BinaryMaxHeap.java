@@ -1,3 +1,4 @@
+
 //Time complexity
 //Search - O(n)
 //insert -O(log n)
@@ -54,6 +55,8 @@ public class BinaryMaxHeap {
         int leftChildValue;
         int rightChildValue;
 
+        if (leftChildIndex > values.size() && rightChildIndex > values.size()) return;
+
         if (leftChildIndex < values.size() && rightChildIndex < values.size()) {
             leftChildValue = (int) values.get(leftChildIndex);
             rightChildValue = (int) values.get(rightChildIndex);
@@ -69,13 +72,14 @@ public class BinaryMaxHeap {
             }
         }
 
-        if (leftChildIndex >= values.size() && rightChildIndex < values.size()) {
-            rightChildValue = (int) values.get(rightChildIndex);
-            if (value < rightChildValue) {
-                swap(index, rightChildIndex);
-                bubbleDown(rightChildIndex);
-            }
-        }
+//        Unnecessary as right child will be present only if left child will be present
+//        if (leftChildIndex >= values.size() && rightChildIndex < values.size()) {
+//            rightChildValue = (int) values.get(rightChildIndex);
+//            if (value < rightChildValue) {
+//                swap(index, rightChildIndex);
+//                bubbleDown(rightChildIndex);
+//            }
+//        }
 
         if (rightChildIndex >= values.size() && leftChildIndex < values.size()) {
             leftChildValue = (int) values.get(leftChildIndex);

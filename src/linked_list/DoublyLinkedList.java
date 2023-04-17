@@ -98,16 +98,22 @@ public class DoublyLinkedList {
     }
 
     private void reverse() {
-// TODO: fix logic
-        Node node = tail;
-        Node pre;
+        Node node = head;
+        head= tail;
+        tail = head;
+
+        Node prev;
         Node next;
-        while (node.hasPrev()) {
-            System.out.println("node " + node.value);
-            pre = node.prev;
-            node.next = pre;
-            node.prev = pre.prev;
-            node = pre;
+
+        while (node != null) {
+           next = node.next;
+           prev = node.prev;
+
+           node.next = prev;
+           node.prev = next;
+
+           node = next;
+
         }
     }
 
@@ -217,17 +223,13 @@ public class DoublyLinkedList {
         node.next = null;
         size--;
     }
+
     public static void main(String[] args) {
         DoublyLinkedList list = new DoublyLinkedList();
         list.insert(0, 100);
         list.insert(1, 200);
         list.insert(2, 300);
         list.insert(3, 400);
-
-        list.push(10);
-        list.push(20);
-        list.push(30);
-        list.pop();
         list.read();
         list.size();
         list.shift();

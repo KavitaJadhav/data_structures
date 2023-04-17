@@ -1,3 +1,10 @@
+//DFS traverse
+// recursion - add element in result, traverse each element
+//iteration - add element in result, maintain STACK for to be visited items
+
+//DFS traverse
+//iteration - add element in result, maintain QUEUE for to be visited items
+
 package graph;
 
 import java.sql.Array;

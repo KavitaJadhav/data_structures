@@ -51,6 +51,8 @@ public class WeightedGraph {
                     previousNodes.put(edge.vertex, vertex);
 
                     int oldDistance = distances.get(edge.vertex);
+
+                    //newDistance = Todo: Use weight attribute to get previous distance instead of calculating + edge weight
                     int newDistance = getDistance(previousNodes, edge.vertex, "A");
 
                     if (newDistance < oldDistance) {

@@ -216,21 +216,39 @@ public class SinglyLinkList {
         list.size();
     }
 
-    private void reverse() {
-//        1,2,3,4
+//    private void reverse() {
+////        1,2,3,4
+//
+//        Node node = head;
+//        head = tail;
+//        tail = node;
+//
+//        Node pre = null;
+//        Node next = null;
+//
+//        for (int i = 0; i < size; i++) {
+//            next = node.getNext();
+//            node.next = pre;
+//            pre = node;
+//            node = next;
+//        }
+//    }
 
+    private void reverse() {
+//        1 2 3 4
         Node node = head;
         head = tail;
         tail = node;
 
         Node pre = null;
-        Node next = null;
+        Node next;
 
-        for (int i = 0; i < size; i++) {
-            next = node.getNext();
+        while (node != null) {
+            next = node.next;
             node.next = pre;
             pre = node;
             node = next;
+
         }
     }
 }
