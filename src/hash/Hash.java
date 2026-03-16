@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Hash {
-    String[][] values = new String[10][10];
     private ArrayList<ArrayList> hashDB = new ArrayList<ArrayList>(10);
 
     public Hash() {

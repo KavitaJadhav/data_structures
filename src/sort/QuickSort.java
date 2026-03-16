@@ -60,7 +60,8 @@ public class QuickSort {
 
 
     public static void main(String[] args) {
-        int[] numbers = new int[]{1, 7, 17, 6, 22, 2, 8, 3, 9, 4};
+        int[] numbers = new int[]{6,2,4,8,3,5,7};
+//        int[] numbers = new int[]{1, 7, 17, 6, 22, 2, 8, 3, 9, 4};
         System.out.println("array: " + Arrays.toString(numbers));
 
         int[] sortedNumbers = QuickSort.sort(numbers);

@@ -22,13 +22,13 @@ public class ArrayListQueue {
     }
 
     public static void main(String[] args) {
-        ArrayListQueue stack = new ArrayListQueue();
-        stack.enqueue(10);
-        stack.enqueue(20);
-        stack.enqueue(30);
-        stack.enqueue(40);
-        stack.dequeue();
-        stack.dequeue();
-        stack.print();
+        ArrayListQueue queue = new ArrayListQueue();
+        queue.enqueue(10);
+        queue.enqueue(20);
+        queue.enqueue(30);
+        queue.enqueue(40);
+        queue.dequeue();
+        queue.dequeue();
+        queue.print();
     }
 }

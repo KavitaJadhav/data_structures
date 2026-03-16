@@ -57,7 +57,6 @@ public class LinkedListQueue {
         if (isEmpty()) {
             tail = node;
         } else {
-
             node.next = head;
             head.prev = node;
         }
@@ -72,13 +71,13 @@ public class LinkedListQueue {
 
 
     public static void main(String[] args) {
-        LinkedListQueue stack = new LinkedListQueue();
-        stack.enqueue(10);
-        stack.enqueue(20);
-        stack.enqueue(30);
-        stack.enqueue(40);
-        stack.dequeue();
-        stack.dequeue();
-        stack.print();
+        LinkedListQueue queue = new LinkedListQueue();
+        queue.enqueue(10);
+        queue.enqueue(20);
+        queue.enqueue(30);
+        queue.enqueue(40);
+        queue.dequeue();
+        queue.dequeue();
+        queue.print();
     }
 }

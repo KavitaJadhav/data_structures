@@ -5,6 +5,10 @@
 //Best -  O(n log n)
 //Best -  O(n log n)
 
+//O(log n) -> Splits
+//O(n) -> comparison while merging the elements
+//combined complexity O(n log n)
+
 //Space Complexity - O(n) - for new result array created in merge function
 
 package sort;

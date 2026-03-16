@@ -38,7 +38,6 @@ public class WeightedGraph {
     }
 
     private void findDistance(List visited, HashMap<String, String> previousNodes, HashMap<String, Integer> distances, Queue distanceQueue) {
-
         while (!distanceQueue.isEmpty()) {
             String vertex = ((Distance) distanceQueue.remove()).vertex;
 
