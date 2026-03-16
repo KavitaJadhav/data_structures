@@ -1,0 +1,81 @@
+SET DATA STRUCTURE – NOTES
+
+Definition:
+A set is a collection of unique elements.
+- No duplicates allowed.
+- Standard sets do not guarantee order.
+
+Example:
+Set = {10, 20, 30}
+Add 20 → ignored
+
+COMMON OPERATIONS:
+
+Operation      Description
+---------      ---------------------------
+add(x)         Insert element x
+remove(x)      Delete element x
+contains(x)    Check if x exists in set
+size()         Number of elements in set
+iterate        Traverse all elements
+
+IMPLEMENTATIONS & COMPLEXITIES:
+
+1. HashSet (Hash Table)
+- Order: unordered
+- Duplicate: not allowed
+
+Time Complexity (Average Case):
+add       → O(1)
+remove    → O(1)
+contains  → O(1)
+iteration → O(n)
+
+Worst-case: O(n) (hash collisions)
+
+2. TreeSet (BST / Red-Black Tree)
+- Order: sorted
+- Duplicate: not allowed
+
+Time Complexity:
+add       → O(log n)
+remove    → O(log n)
+contains  → O(log n)
+iteration → O(n)
+
+3. BitSet (for small integer ranges)
+- Underlying: Array of bits
+- Usage: integers in range 0..N
+
+Operations:
+add/remove/contains → O(1)
+union/intersection → O(n bits)
+
+COMMON USE CASES:
+1. Remove duplicates from list
+2. Fast membership checking (contains)
+3. Set operations: union, intersection, difference
+4. Mathematical set operations: subset, superset
+
+EXAMPLES:
+
+Java HashSet:
+Set<Integer> set = new HashSet<>();
+set.add(10);
+set.add(20);
+set.add(10);   // ignored
+set.contains(20); // true
+set.remove(10);
+
+Python set:
+s = set()
+s.add(10)
+s.add(20)
+s.add(10)      # ignored
+20 in s        # True
+s.remove(10)
+
+INTERVIEW TIP:
+- Clarify implementation for complexity:
+  HashSet → O(1) average
+  TreeSet → O(log n), ordered

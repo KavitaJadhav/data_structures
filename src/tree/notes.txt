@@ -1,0 +1,364 @@
+Here are **clean text notes for Trees (Data Structures)** you can easily copy or revise.
+
+---
+
+TREE – BASICS
+
+A tree is a **hierarchical data structure** consisting of nodes connected by edges.
+
+Properties:
+
+* One root node
+* Every node may have children
+* No cycles
+* Connected structure
+
+If a tree has **n nodes**, it has **n − 1 edges**.
+
+---
+
+TREE TERMINOLOGY
+
+Node
+A single element in the tree.
+
+Root
+The top node of the tree.
+
+Parent
+A node that has children.
+
+Child
+A node that descends from another node.
+
+Example
+
+```
+    A
+   / \
+  B   C
+```
+
+A = root
+B, C = children of A
+
+---
+
+LEAF NODE
+
+Node with **no children**.
+
+Example
+
+```
+    A
+   / \
+  B   C
+     /
+    D
+```
+
+Leaf nodes = B, D
+
+---
+
+INTERNAL NODE
+
+Node that has **at least one child**.
+
+Example
+
+A, C
+
+---
+
+DEGREE OF NODE
+
+Number of children of a node.
+
+Example
+
+```
+    A
+   /|\
+  B C D
+```
+
+degree(A) = 3
+
+---
+
+DEPTH OF NODE
+
+Number of edges from **root to the node**.
+
+Example
+
+```
+    A
+   /
+  B
+ /
+C
+```
+
+depth(C) = 2
+
+---
+
+HEIGHT OF NODE
+
+Number of edges in the **longest path from the node to a leaf**.
+
+---
+
+HEIGHT OF TREE
+
+Number of edges in the **longest path from root to leaf**.
+
+Example
+
+```
+    A
+   /
+  B
+ /
+C
+```
+
+height = 2
+
+(Some definitions count nodes instead of edges.)
+
+---
+
+LEVEL OF NODE
+
+Level = depth + 1
+
+Example
+
+```
+    A
+   / \
+  B   C
+```
+
+Level(A) = 1
+Level(B) = 2
+
+---
+
+BINARY TREE
+
+A tree where each node has **at most 2 children**.
+
+Children are called:
+
+Left child
+Right child
+
+Example
+
+```
+    A
+   / \
+  B   C
+```
+
+---
+
+FULL BINARY TREE
+
+Each node has **0 or 2 children**.
+
+Example
+
+```
+    A
+   / \
+  B   C
+ / \
+D   E
+```
+
+---
+
+COMPLETE BINARY TREE
+
+All levels filled except possibly the last, and nodes are filled **from left to right**.
+
+Example
+
+```
+    A
+   / \
+  B   C
+ / \  /
+D  E F
+```
+
+---
+
+PERFECT BINARY TREE
+
+All internal nodes have **2 children** and **all leaves are at same level**.
+
+Nodes formula
+
+nodes = 2^(h+1) − 1
+
+---
+
+BALANCED BINARY TREE
+
+Height is approximately **log(n)**.
+
+Example
+
+AVL Tree
+Red-Black Tree
+
+---
+
+BINARY SEARCH TREE (BST)
+
+Binary tree where:
+
+left subtree < root
+right subtree > root
+
+Example
+
+```
+    40
+   /  \
+ 20    60
+/ \   / \
+```
+
+10 30 50 70
+
+Inorder traversal → **sorted order**
+
+---
+
+TREE TRAVERSALS
+
+Traversal = visiting nodes in a specific order.
+
+---
+
+DFS (Depth First Traversal)
+
+1. Preorder (Root Left Right)
+
+Example
+
+```
+    A
+   / \
+  B   C
+```
+
+Traversal
+
+A B C
+
+---
+
+2. Inorder (Left Root Right)
+
+Traversal
+
+B A C
+
+For BST → produces **sorted order**
+
+---
+
+3. Postorder (Left Right Root)
+
+Traversal
+
+B C A
+
+Used in **deleting tree**
+
+---
+
+BFS (Breadth First Traversal)
+
+Also called **Level Order Traversal**.
+
+Uses **Queue**
+
+Example
+
+```
+    A
+   / \
+  B   C
+ / \
+D   E
+```
+
+Traversal
+
+A B C D E
+
+---
+
+TREE COMPLEXITY
+
+Search (BST)
+
+Average = O(log n)
+Worst = O(n)
+
+Insertion (BST)
+
+Average = O(log n)
+Worst = O(n)
+
+Deletion (BST)
+
+Average = O(log n)
+Worst = O(n)
+
+---
+
+MAX NODES IN BINARY TREE
+
+Maximum nodes at level L
+
+2^(L-1)
+
+Maximum nodes in tree of height h
+
+2^(h+1) − 1
+
+---
+
+MINIMUM HEIGHT OF TREE
+
+h ≈ log₂(n)
+
+Used in balanced trees.
+
+---
+
+COMMON TREE TYPES
+
+Binary Tree
+Binary Search Tree (BST)
+AVL Tree
+Red-Black Tree
+Heap
+Trie
+Segment Tree
+B-Tree
+
+---
+
+If you'd like, I can also give you a **very powerful 1-page Tree Interview Cheat Sheet (covers 80% of tree problems asked in Google / Amazon / Waymo interviews)**.
