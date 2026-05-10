@@ -4,8 +4,8 @@
 //Average - O(n log n)
 //Best -  O(n log n)
 //worst -  O(n square)
+//Space Complexity -O(log n) - recursion stack
 
-//Space Complexity -O(n log n) - for new result array created in merge function
 
 package sort;
 
